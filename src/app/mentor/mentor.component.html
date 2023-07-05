@@ -1,0 +1,19 @@
+<div class="mentor-section">
+  <div class="mentor container">
+    <app-section
+      [sectiontitle]="'Mentor'"
+      [sectiontext]="'Build skills faster with an expert in your corner'"
+    ></app-section>
+    <div class="container-card">
+      <div class="single-card" *ngFor="let mentor of mentorCard">
+        <app-mentor-card
+          [profileUrl]="mentor.profileUrL"
+          [label]="mentor.label"
+          [title]="mentor.title"
+          [proffession]="mentor.proffession"
+          [logoUrl]="mentor.logoUrl"
+        ></app-mentor-card>
+      </div>   
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+.navbar {
+  height: 80px; /*  Default height for desktop view */
+  background-color: var(--brand-light-blue);
+  box-shadow: 0px 10px 80px 2px #B0C1F1;
+
+  .nav-link {
+    color: var(--black);
+    font-family: "Montserrat", sans-serif;
+    margin-right: 10px;
+  }
+
+  .away-logo {
+    width: 15%;
+    height: 15%;
+  }
+
+  .nav-btn-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-family: "Montserrat", sans-serif;
+
+    .nav-btn-primary {
+      border: 2px solid var(--primary-blue);
+      text-transform: uppercase;
+      border-radius: 3px;
+    }
+    .nav-btn-secondary {
+      background-color: var(--primary-blue);
+      text-transform: uppercase;
+      border-radius: 3px;
+      color: white;
+    }
+  } 
+  @media (max-width: 991px) {
+    height: auto; /* Reset height for mobile view */
+    .away-logo {
+    width: 40%;
+    height: 40%;
+    object-fit: cover;
+  }
+    .mobile {
+      text-align: center;
+      width: 200px;
+      margin: 0 auto;
+    }
+
+    .container {
+      padding: 20px 20px;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<div class="card">
+  <div class="label">{{ plan.label }}</div>
+  <ul>
+    <li class="feature" *ngFor="let feature of plan.features" >
+      <span><i class="fa-regular fa-circle-check"></i></span>
+      {{ feature }}
+    </li>
+  </ul>
+  <a [href]="plan.apply" class="logoUrl"> apply now <span><i class="fa-sharp fa-arrow-right"></i></span> </a>
+</div>

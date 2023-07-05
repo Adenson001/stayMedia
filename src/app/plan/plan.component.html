@@ -1,0 +1,15 @@
+<div class="mentor-section">
+  <div class="mentor container">
+    <app-section
+      [sectiontitle]="'PLANS'"
+      [sectiontext]="'Fund your future, we offer a range of payment options'"
+    ></app-section>
+    <div class="container-card" >
+      <div class="single-card" *ngFor="let plan of planCard" >
+        <app-plan-card [plan]="plan" ></app-plan-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div></div>

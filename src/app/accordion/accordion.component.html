@@ -1,0 +1,32 @@
+<div class="accordion-section">
+<section class="faq">
+  <app-section
+    [sectiontitle]="'FAQS'"
+    [sectiontext]="'Your questions, answered'"
+  ></app-section>
+  <div class="accordionlist" *ngFor="let accordion of accordionList; let i = index">
+    <article class="accordion-item">
+      <div class="accordion-item-title" [ngClass]="{'active': i === activeAccordionItem}" (click)="toggleAccordion(i)">
+        <p>{{ accordion.title }}</p>
+        <div class="question-btn">
+          <span class="plus-icon" [ngStyle]="{'display': i !== activeAccordionItem ? 'inline' : 'none'}">
+            <i class="fa-sharp fa-plus"></i>
+          </span>
+          <span class="minus-icon" [ngStyle]="{'display': i === activeAccordionItem ? 'inline' : 'none'}">
+            <i class="fa-sharp fa-minus"></i>
+          </span>
+        </div>
+      </div>
+
+      <div class="accordion-item-body" [ngClass]="{'active': i === activeAccordionItem}"
+       [style.maxHeight.px]="(i === activeAccordionItem) ? getContentHeight(i) : 0">
+        <div class="accordion-item-body-content">
+          <p>
+            {{ accordion.content }}
+          </p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+</div>
